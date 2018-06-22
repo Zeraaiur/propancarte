@@ -12,4 +12,19 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+
+/*// External libraries*/
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*// Your CSS partials*/
+@import "config/font";
+@import "config/colors";
+
+
+
+@import "shared/navbar";
