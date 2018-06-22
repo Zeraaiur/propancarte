@@ -64,4 +64,5 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'rubocop', require: false
 gem 'bootstrap', '~> 4.0.0'
-
+gem 'carrierwave'
+gem 'cloudinary'

@@ -1,63 +1,69 @@
 /* Main navbar */
 @import "config/colors";
 
+.navbar-tiny-screen{
+  display:none;
+}
+#tiny-navbar-logo{
+  max-width:100%;
+}
+
 .navbar {
-  width:100vw!important;
+  width:100vw;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
-  transition: all 0.3s ease;
-  // height: 70px;
-  padding: 0px;
+  padding: 0px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .nav-bar-inside{
-  width:100%;
+  width:100%!important;
   padding:0px;
-  margin:20px 0px;
+  margin:10px 0px;
 }
 .navbar-col:first-child{
   text-align:left;
-  border:1px solid black;
 }
 .navbar-col:last-child{
-  text-align:right;
-  border:1px solid black;
+  display:flex;
+  justify-content:flex-end;
+  align-items: center;
 }
 #navbar-phone{
   font-family: 'Roboto', sans-serif;
   color:$dblue;
-  font-size:1.5em;
+  font-size:2.5em;
+  &:hover{
+    color:$mblue;
+    text-decoration:none;
+  }
+}
+#navbar-logo{
+  max-width:100%;
 }
 
-@media only screen and (max-width: 576px) {
-  .navbar-col{
+@media only screen and (max-width: 768px) {
+  .navbar-col:last-child{
     text-align:center!important;
+    display:inline-block;
   }
   #navbar-phone{
-    font-size:1.3em;
+    font-size:2em;
   }
+
+
 }
-
-
-
-
-
-/* Logo */
-// .navbar-brand img {
-//   height: 50px;
-// }
-// /* Right section */
-// .navbar-right {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-
-
-// /* Navbar link */
-// .navbar-phone {
-//   color: #616668;
-//   font-size: 14px;
-// }
+@media only screen and (max-width: 576px) {
+.navbar{
+  display:none;
+}
+.navbar-tiny-screen{
+  display:inline-block;
+  text-align:center;
+  padding:10px 0px;
+}
+#phone-box{
+  background-color:$lblue;
+}
+}

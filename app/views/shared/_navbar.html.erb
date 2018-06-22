@@ -1,14 +1,21 @@
 <div class="navbar">
-    <div class="nav-bar-inside row container">
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 navbar-col">
-        One of three columns
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 navbar-col">
-        <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
-      </div>
+  <div class="nav-bar-inside row ">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col">
+      <%= cl_image_tag("logo-inline-01", :id => "navbar-logo") %>
+
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col">
+      <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
+    </div>
+  </div>
 </div>
 
+<div class="navbar-tiny-screen">
+  <%= cl_image_tag("logo-square-01", :id => "tiny-navbar-logo") %>
+  <div id="phone-box">
+  <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
+  </div>
+</div>
 
 
 
