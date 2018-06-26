@@ -1,0 +1,24 @@
+.construction{
+  background-color: $red;
+
+  .text-construction{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    padding:30px 25%;
+    font-size:2em;
+    line-height:1.1;
+  }
+}
+@media only screen and (max-width: 768px) {
+ .construction{
+    .text-construction{
+      color:white;
+      font-family: 'Roboto', sans-serif;
+      text-align:center;
+      padding:20px 2%;
+      font-size:1.5em;
+      margin:0px!important;
+    }
+  }
+}
