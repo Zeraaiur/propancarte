@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+Product.destroy_all
+puts "destroyed Product"
+
+category = ["BANNIÈRES RETRACTABLES", "SIGNALISATION ROUTIÈRE", "PANNEAUX CHASSE ET PÊCHE", "PANNEAUX D'INTERPRÉTATION", "PANCARTES TEMPORAIRES", "AFFICHES INTÉRIEURES"]
+
+
+
+40.times do
+
+
+product = Product.new(
+  name: Faker::Commerce.color,
+  category: category.sample,
+  url: "https://source.unsplash.com/random"
+
+  )
+product.save!
+
+end

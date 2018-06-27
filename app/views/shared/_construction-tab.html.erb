@@ -1,17 +1,19 @@
 <div class="construction">
-<div class="text-construction">Nous CONSTRUISONS présentement un nouveau site WEB pour mieux vous servir !</div>
-<div class="main-tabs-container container-fluid">
-  <div class="row main-tabs-row">
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs active-tabs">BANNIÈRES<br>RETRACTABLES</div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs">SIGNALISATION<br>ROUTIÈRE</div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs">PANNEAUX<br>CHASSE ET PÊCHE</div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs">PANNEAUX<br>D'INTERPRÉTATION</div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs">PANCARTES<br>TEMPORAIRES</div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs">AFFICHES<br>INTÉRIEURES</div>
+  <div class="text-construction">Nous CONSTRUISONS présentement un nouveau site WEB pour mieux vous servir !
   </div>
-</div>
-
-
-
+  <div class="main-tabs-container container-fluid">
+    <div class="row main-tabs-row">
+        <% categories = Product.distinct.pluck(:category).sort %>
+        <% categories.each_with_index do |my_category, index| %>
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs" onclick="switchTab(event, <%= "tab#{index}" %>,  <%= "category#{index}" %>)" id=<%= "tab#{index}" %> >
+            <%= my_category.split(" ").first %>
+            <br>
+            <% my_category.split(" ").drop(1).each do |x| %>
+            <%= x + " " %>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+  </div>
 </div>
 

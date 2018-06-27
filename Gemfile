@@ -66,3 +66,4 @@ gem 'rubocop', require: false
 gem 'bootstrap', '~> 4.0.0'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

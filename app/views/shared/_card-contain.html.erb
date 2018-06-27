@@ -1,23 +1,20 @@
 <div class="main-card-container container-fluid">
-  <div class="row">
 
-    <% 10.times do  %>
-
-    <div class="card-container col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xs-3">
-      <div class="card">
-        <div class="card-image">
-        </div>
-        <div class="card-footer">
-          <h5>SIGNALISATION ROUTIÈRE</h5>
-          <p>SIGNALISATION ROUTIÈRE</p>
-        </div>
+  <% categories = Product.distinct.pluck(:category).sort %>
+    <% categories.each_with_index do |my_category, index| %>
+      <div class="row display-cards-category display-none" id=<%= "category#{index}" %>>
+        <% Product.all.select { |m| m.category == my_category }.each do |product| %>
+          <div class="card-container col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xs-3">
+            <div class="card">
+              <div class="card-image" style="background-image:url(<%= product.url %>)">
+              </div>
+              <div class="card-footer">
+                <h5><%= product.name.upcase %></h5>
+                <p><%= product.category.upcase %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-
-
     <% end %>
-
-
-
-  </div>
 </div>
