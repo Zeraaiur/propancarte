@@ -1,19 +1,33 @@
 <div class="construction">
   <div class="text-construction">Nous CONSTRUISONS présentement un nouveau site WEB pour mieux vous servir !
   </div>
-  <div class="main-tabs-container container-fluid">
+
+
+  <!-- tabs for large sreen -->
+
+
+  <div class="main-tabs-container container-fluid d-none d-lg-block">
     <div class="row main-tabs-row">
-        <% categories = Product.distinct.pluck(:category).sort %>
-        <% categories.each_with_index do |my_category, index| %>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs" onclick="switchTab(event, <%= "tab#{index}" %>,  <%= "category#{index}" %>)" id=<%= "tab#{index}" %> >
-            <%= my_category.split(" ").first %>
-            <br>
-            <% my_category.split(" ").drop(1).each do |x| %>
-            <%= x + " " %>
-            <% end %>
-          </div>
+      <% categories = Product.distinct.pluck(:category).sort %>
+      <% categories.each_with_index do |my_category, index| %>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 col-xl-2 col-tabs" onclick="switchTab(event, <%= "tab#{index}" %>,  <%= "category#{index}" %>)" id=<%= "tab#{index}" %> >
+        <%= my_category.split(" ").first %>
+        <br>
+        <% my_category.split(" ").drop(1).each do |x| %>
+        <%= x + " " %>
         <% end %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
+
+  <!-- tabs for small sreen -->
+
+  <select name="name_title" class="category-select-input d-lg-none" id="category-change" onChange="selectCat()">
+   <% categories = Product.distinct.pluck(:category).sort %>
+   <% categories.each_with_index do |my_category, index| %>
+   <option value=<%= "category#{index}" %>><%= my_category %></option>
+   <% end %>
+ </select>
 

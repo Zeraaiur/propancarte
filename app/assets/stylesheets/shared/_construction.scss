@@ -1,26 +1,27 @@
 .construction{
   background-color: $red;
+  text-align:center;
 
   .text-construction{
     color:white;
     font-family: 'Roboto', sans-serif;
     text-align:center;
-    padding:30px 25%;
+    padding:30px 20%;
     font-size:2em;
     line-height:1.1;
   }
 }
 @media only screen and (max-width: 768px) {
  .construction{
-    .text-construction{
-      color:white;
-      font-family: 'Roboto', sans-serif;
-      text-align:center;
-      padding:20px 2%;
-      font-size:1.5em;
-      margin:0px!important;
-    }
+  .text-construction{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    padding:20px 2%;
+    font-size:1.5em;
+    margin:0px!important;
   }
+}
 }
 
 .main-tabs-container{
@@ -52,7 +53,7 @@
   border-top:15px solid white;
   color:$dblue;
   cursor:default;
-    &:hover{
+  &:hover{
     opacity:1;
     color:$dblue;
   }
@@ -62,3 +63,18 @@
 .display-none{
   display:none;
 }
+.category-select-input{
+  width:100vw;
+  border-radius:0px;
+  height:50px;
+  text-align:center;
+  font-size:1.7em;
+  font-family: 'Roboto', sans-serif;
+  background-image: $gradient;
+  color:$lblue;
+  cursor:pointer;
+  &:hover{
+    opacity:0.9;
+  }
+}
+select { width: 400px; text-align-last:center; }

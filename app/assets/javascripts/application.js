@@ -22,13 +22,28 @@ window.onload = function(){
   document.getElementById("tab0").classList.add("active-tab");
   document.getElementById("category0").classList.remove("display-none");
 }
+function removeItems(){
+  const displayItems  = document.querySelectorAll(".display-cards-category")
+  displayItems.forEach(item => item.classList.add("display-none"))
+}
+
+
 
 function switchTab(event, tab, category){
   document.querySelector(".active-tab").classList.remove("active-tab");
   document.getElementById(tab.id).classList.add("active-tab");
 
-  const displayItems  = document.querySelectorAll(".display-cards-category")
-  displayItems.forEach(item => item.classList.add("display-none"))
+  removeItems();
 
   document.getElementById(category.id).classList.remove("display-none");
 }
+
+
+function selectCat(){
+
+  removeItems();
+  const category = document.getElementById("category-change").value
+  document.getElementById(category).classList.remove("display-none");
+}
+
+
