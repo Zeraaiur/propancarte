@@ -43,6 +43,7 @@
   padding:15px 0px;
   &:hover{
     opacity:0.9;
+    color:white;
   }
 }
 .active-tab{
@@ -50,10 +51,10 @@
   background-color:white;
   border-top:15px solid white;
   color:$dblue;
-  &:hover{
+  cursor:default;
+    &:hover{
     opacity:1;
-    background-color:$lgrey;
-    border-top:15px solid $lgrey;
+    color:$dblue;
   }
   // box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.07),0 -1px 0 0 rgba(0,0,0,0.03);
 

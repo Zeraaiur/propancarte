@@ -1,14 +1,86 @@
-<div class="navbar">
+
+
+<div class="navbar container-fluid">
+
+
+
+
+  <div class="triangle d-none d-lg-block"></div>
+  <div class="d-none d-lg-block about"><p>A PROPOS</p></div>
+
+
+  <div class="nav-bar-inside row ">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col">
+      <%= cl_image_tag("logo-inline-01", :id => "navbar-logo") %>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col d-none d-lg-block">
+      <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<!--
+
+
+
+
   <div class="nav-bar-inside row ">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col">
       <%= cl_image_tag("logo-inline-01", :id => "navbar-logo") %>
 
-    </div>
+
+
+
+
+
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 navbar-col">
+
       <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
     </div>
   </div>
-</div>
+
+
+
+  <div class="navbar-hidden hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Host</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Messagese</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
 
 <div class="navbar-tiny-screen">
   <%= cl_image_tag("logo-square-01", :id => "tiny-navbar-logo") %>
@@ -16,3 +88,4 @@
     <a href="tel:4188157543" id="navbar-phone">418 815-7543</a>
   </div>
 </div>
+-->

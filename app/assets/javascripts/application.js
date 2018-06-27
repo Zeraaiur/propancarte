@@ -14,25 +14,21 @@
   //= require activestorage
   //= require turbolinks
   //= require_tree .
-  window.onload = function(){
-    document.getElementById("tab0").classList.add("active-tab");
-    document.getElementById("category0").classList.remove("display-none");
-  }
+  //= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 
-  function switchTab(event, tab, category){
+window.onload = function(){
+  document.getElementById("tab0").classList.add("active-tab");
+  document.getElementById("category0").classList.remove("display-none");
+}
 
-    document.querySelector(".active-tab").classList.remove("active-tab");
-    document.getElementById(tab.id).classList.add("active-tab");
+function switchTab(event, tab, category){
+  document.querySelector(".active-tab").classList.remove("active-tab");
+  document.getElementById(tab.id).classList.add("active-tab");
 
-    document.querySelectorAll(".display-cards-category").forEach(function(){
-      classList.add("display-none");
-    }
-    );
+  const displayItems  = document.querySelectorAll(".display-cards-category")
+  displayItems.forEach(item => item.classList.add("display-none"))
 
-
-
-
-
-    document.getElementById(category.id).classList.remove("display-none");
-
-  }
+  document.getElementById(category.id).classList.remove("display-none");
+}
