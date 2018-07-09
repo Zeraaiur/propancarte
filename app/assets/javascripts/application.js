@@ -18,6 +18,9 @@
 //= require popper
 //= require bootstrap-sprockets
 
+
+//TABS and CATEGORIES
+
 window.onload = function(){
   document.getElementById("tab0").classList.add("active-tab");
   document.getElementById("category0").classList.remove("display-none");
@@ -55,10 +58,26 @@ function selectCat(){
 
   document.querySelector(".active-tab").classList.remove("active-tab");
   document.getElementById(tab).classList.add("active-tab");
-
 }
 
+//MODALS
 
 
+function zoomModal(image){
 
+var modal = document.getElementById('myModal');
+
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    captionText.innerHTML = image.alt;
+
+};
+
+function closeModal(){
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+};
 
