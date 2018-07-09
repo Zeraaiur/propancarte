@@ -16,7 +16,11 @@
   max-width:400px;
   overflow:hidden;
   max-height:400px;
+  cursor:pointer;
+&:hover{
+  opacity:0.7;
 
+}
 }
 .card-footer{
   height:80px;
