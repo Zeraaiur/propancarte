@@ -1,0 +1,80 @@
+.construction{
+  background-color: $red;
+  text-align:center;
+
+  .text-construction{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    padding:30px 20%;
+    font-size:2em;
+    line-height:1.1;
+  }
+}
+@media only screen and (max-width: 768px) {
+ .construction{
+  .text-construction{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    padding:20px 2%;
+    font-size:1.5em;
+    margin:0px!important;
+  }
+}
+}
+
+.main-tabs-container{
+  background-color:$red;
+  padding:0px 4%;
+
+}
+
+.col-tabs{
+  // border:1px solid $dblue;
+  text-align:center;
+  width:100%;
+  background-image: $gradient;
+  // background-color:$mblue;
+  color:$lblue;
+  font-size:1em;
+  font-weight:bold;
+  border-top:15px solid $red;
+  cursor:pointer;
+  padding:15px 0px;
+  &:hover{
+    opacity:0.9;
+    color:white;
+  }
+}
+.active-tab{
+  background-image: none;
+  background-color:white;
+  border-top:15px solid white;
+  color:$dblue;
+  cursor:default;
+  &:hover{
+    opacity:1;
+    color:$dblue;
+  }
+  // box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.07),0 -1px 0 0 rgba(0,0,0,0.03);
+
+}
+.display-none{
+  display:none;
+}
+.category-select-input{
+  width:100vw;
+  border-radius:0px;
+  height:50px;
+  text-align:center;
+  font-size:1.7em;
+  font-family: 'Roboto', sans-serif;
+  background-image: $gradient;
+  color:$lblue;
+  cursor:pointer;
+  &:hover{
+    opacity:0.9;
+  }
+}
+select { width: 400px; text-align-last:center; }

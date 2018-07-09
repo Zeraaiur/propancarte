@@ -1,0 +1,18 @@
+development:
+  cloud_name: prodelapancarte
+  api_key: '475588346317251'
+  api_secret: KFnl5Dqo5VZDdmgFqITaWPm0hHc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: prodelapancarte
+  api_key: '475588346317251'
+  api_secret: KFnl5Dqo5VZDdmgFqITaWPm0hHc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: prodelapancarte
+  api_key: '475588346317251'
+  api_secret: KFnl5Dqo5VZDdmgFqITaWPm0hHc
+  enhance_image_tag: true
+  static_image_support: false

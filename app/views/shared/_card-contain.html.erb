@@ -1,0 +1,29 @@
+<div class="main-card-container container-fluid">
+
+  <% categories = Product.distinct.pluck(:category).sort %>
+    <% categories.each_with_index do |my_category, index| %>
+      <div class="row display-cards-category display-none" id=<%= "category#{index}" %>>
+        <% Product.all.select { |m| m.category == my_category }.each do |product| %>
+          <div class="card-container col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xs-3">
+            <div class="card">
+
+            <%= cl_image_tag("samples/landscapes/nature-mountains.jpg", :class=>"card-image", :alt=>product.name.upcase + ", " + product.category.capitalize, :onclick=>"zoomModal(this);") %>
+
+              <div class="card-footer">
+                <h5><%= product.name.upcase %></h5>
+                <p><%= product.category.upcase %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+        <div class="row display-cards-category display-none" id="category5">
+
+          TEXT PERSO!
+        </div>
+
+
+
+</div>
