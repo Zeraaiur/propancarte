@@ -22,12 +22,11 @@ window.onload = function(){
   document.getElementById("tab0").classList.add("active-tab");
   document.getElementById("category0").classList.remove("display-none");
 }
+
 function removeItems(){
   const displayItems  = document.querySelectorAll(".display-cards-category")
   displayItems.forEach(item => item.classList.add("display-none"))
 }
-
-
 
 function switchTab(event, tab, category){
   document.querySelector(".active-tab").classList.remove("active-tab");
@@ -36,14 +35,30 @@ function switchTab(event, tab, category){
   removeItems();
 
   document.getElementById(category.id).classList.remove("display-none");
-}
 
+  // For changing to small-screen auto-adjust
+
+  const select = document.getElementById("category-change");
+  let option = parseInt(tab.id.slice(-1));
+
+  select.options[option].selected = true;
+}
 
 function selectCat(){
-
   removeItems();
-  const category = document.getElementById("category-change").value
-  document.getElementById(category).classList.remove("display-none");
+  const select = document.getElementById("category-change");
+  document.getElementById(select.value).classList.remove("display-none");
+
+
+  let option = select.options[select.selectedIndex].value.slice(-1);
+  let tab = "tab"+option
+
+  document.querySelector(".active-tab").classList.remove("active-tab");
+  document.getElementById(tab).classList.add("active-tab");
+
 }
+
+
+
 
 
