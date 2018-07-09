@@ -65,14 +65,24 @@ function selectCat(){
 
 function zoomModal(image){
 
-var modal = document.getElementById('myModal');
+  var modal = document.getElementById('myModal');
 
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
 
-    modal.style.display = "block";
-    modalImg.src = image.src;
-    captionText.innerHTML = image.alt;
+  modal.style.display = "block";
+  modalImg.src = image.src;
+  captionText.innerHTML = image.alt;
+
+  document.addEventListener('keydown', (event) => {
+
+    if (event.keyCode === 27){
+
+      closeModal();
+
+
+    }
+  });
 
 };
 

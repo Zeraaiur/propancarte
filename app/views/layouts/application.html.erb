@@ -5,7 +5,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -13,14 +13,14 @@
 
 
 <body>
-<%= render "shared/navbar.html.erb" %>
+  <%= render "shared/navbar.html.erb" %>
   <%= yield %>
-<%= render "shared/footer.html.erb" %>
+  <%= render "shared/footer.html.erb" %>
 
 
 
 </body>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </html>
 
