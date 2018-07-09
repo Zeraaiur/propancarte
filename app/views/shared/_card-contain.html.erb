@@ -1,9 +1,9 @@
 <div class="main-card-container container-fluid">
 
-  <% categories = Product.distinct.pluck(:category).sort %>
+  <% categories = @products.distinct.pluck(:category).sort %>
     <% categories.each_with_index do |my_category, index| %>
       <div class="row display-cards-category display-none" id=<%= "category#{index}" %>>
-        <% Product.all.select { |m| m.category == my_category }.each do |product| %>
+        <% @products.all.select { |m| m.category == my_category }.each do |product| %>
           <div class="card-container col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xs-3">
             <div class="card">
 

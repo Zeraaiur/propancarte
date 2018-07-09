@@ -9,18 +9,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-
-
-
 <body>
-  <%= render "shared/navbar.html.erb" %>
   <%= yield %>
   <%= render "shared/footer.html.erb" %>
-
-
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </html>
 

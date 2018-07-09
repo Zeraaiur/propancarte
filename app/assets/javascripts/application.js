@@ -91,3 +91,7 @@ function closeModal(){
   modal.style.display = "none";
 };
 
+
+function closeConstruction(){
+document.getElementById("text-construction").classList.add("display-none")
+}

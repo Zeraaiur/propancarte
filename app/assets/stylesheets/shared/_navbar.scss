@@ -13,7 +13,14 @@
   color:white;
   font-size:1.3em;
   font-weight:bold;
-
+  ul li a{
+    text-decoration:none;
+    color:white;
+    &:hover{
+      text-decoration:none;
+    opacity:0.7;
+    }
+  }
 }
 .triangle{
   top:0px;
@@ -94,6 +101,7 @@ text-align:right;
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
   color: $mblue !important;
+
 }
 .dropdown-toggle::after {
     display:none;
