@@ -12,7 +12,7 @@
   //
   //= require rails-ujs
   //= require activestorage
-  //= require turbolinks
+
   //= require_tree .
   //= require jquery3
 //= require popper
@@ -79,8 +79,6 @@ function zoomModal(image){
     if (event.keyCode === 27){
 
       closeModal();
-
-
     }
   });
 
@@ -93,5 +91,12 @@ function closeModal(){
 
 
 function closeConstruction(){
-document.getElementById("text-construction").classList.add("display-none")
+  document.getElementById("text-construction").classList.add("display-none")
 }
+
+//PARTNERS CAROUSSEL
+
+
+
+
+// document.getElementById("")

@@ -8,14 +8,12 @@
 require 'faker'
 
 Product.destroy_all
-puts "destroyed Product"
+Partner.destroy_all
+puts "destroyed DB"
 
 category = ["AFFICHAGE CORPORATIF", "SIGNALISATION ROUTIÈRE", "PANNEAUX CHASSE ET PÊCHE", "PANNEAUX D'INTERPRÉTATION", "PANCARTES HUMORISTIQUES"]
 
-
-
 40.times do
-
 
 product = Product.new(
   name: Faker::Commerce.color,
@@ -26,3 +24,20 @@ product = Product.new(
 product.save!
 
 end
+
+
+20.times do
+
+partner = Partner.new(
+  name: Faker::Coffee.origin,
+  image: "https://source.unsplash.com/random",
+  url: "https://www.google.ca"
+
+  )
+partner.save!
+
+end
+
+
+puts "DB reseed!"
+

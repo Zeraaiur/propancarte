@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @link1 = ["A PROPOS", apropos_path]
     @link2 = ["CONTACT", contact_path]
     @products = Product.all
+    @partners = Partner.all
   end
   def apropos
     @link1 = ["ACCUEIL", root_path]

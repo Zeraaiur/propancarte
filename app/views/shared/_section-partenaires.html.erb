@@ -1,10 +1,24 @@
-<div class="main-partners-container container-fluid">
+<div class="section-partners">
+  <div class="container-title">
+<p>Nous avons la chance de travailler avec ces partenaires</p>
+    <div class="partners-container container-fluid">
 
-  <div class="row display-partners">
-    <div class="partners-container col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xs-3">
-
+      <div class="row partners-row">
+        <div class="arrow-col col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2" id="arrow-left">
+          Left
+        </div>
+        <% i = 0 %>
+        <% @partners.all.sample(4).each do |partner| %>
+        <div class="partners-col col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2" id=<%= "partner#{i.to_s}" %>>
+          <% i = i + 1 %>
+            <%= cl_image_tag(partner.image, :class=>"partner-image", :alt=>partner.name.upcase, :onclick=>"zoomModal(this);") %>
+          </div>
+          <% end %>
+          <div class="arrow-col col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2" id="arrow-right">
+            Right
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-
-</div>
