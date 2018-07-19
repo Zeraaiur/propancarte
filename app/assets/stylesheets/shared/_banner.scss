@@ -59,6 +59,8 @@
 
   cursor:pointer;
   padding:15px 0px;
+      -webkit-transition: color 0.6s; /* Safari */
+    transition: color 0.6s;
 
 
   &:hover{
